@@ -1,76 +1,54 @@
 class Produto {
-  // Construtor da classe Produto para inicializar os atributos
   constructor() {
     this.nome = "";
-    this.preco = "";
-    this.quantidade = "";
+    this.preco = 0;
+    this.quantidade = 0;
   }
 
-  // Método para cadastrar um produto com base nos dados fornecidos
   setProduto(data) {
-    this.nome = data.nome || "";
-    this.preco = data.preco || "";
-    this.quantidade = data.quantidade || "";
+    this.nome = data[0];
+    this.preco = data[1];
+    this.quantidade = data[2];
   }
 
-  // Método para obter uma representação legível do produto
   getProduto() {
-    return `Produto: ${this.nome}, Preço: R$${this.preco.toFixed(
-      2
-    )}, Quantidade: ${this.quantidade}`;
+    return `Produto: ${this.nome}, Preço: ${this.preco}, Quantidade: ${this.quantidade}`;
   }
 }
 
 class Venda extends Produto {
-  // Construtor da classe Venda que chama o construtor da classe Produto
   constructor() {
     super();
     this.quantidadeVendida = 0;
-    this.desconto = "";
+    this.desconto = 0;
   }
 
-  // Método para registrar uma venda
-  setVenda(data) {
-    let produtoCadastrado = false;
-
-    // Verifica se o produto está cadastrado
-    if (this.nome === data.nome) {
-      produtoCadastrado = true;
-
-      // Verifica se há estoque suficiente para realizar a venda
-      if (this.quantidade >= data.quantidade) {
-        // Realiza a venda, atualiza a quantidade vendida, aplica desconto e atualiza o estoque
-        this.quantidadeVendida = data.quantidade;
-        this.desconto = data.desconto || "";
-        this.quantidade -= this.quantidadeVendida;
-      } else {
-        console.log("Estoque insuficiente para realizar a venda.");
-      }
+  setVenda(quantidade, desconto) {
+    if (this.nome && this.quantidade >= quantidade) {
+      this.quantidade -= quantidade;
+      this.quantidadeVendida = quantidade;
+      this.desconto = desconto;
     } else {
-      console.log("Produto não cadastrado.");
+      console.log("Produto não cadastrado ou estoque insuficiente.");
     }
-
-    return produtoCadastrado;
   }
 
-  // Método para obter uma representação legível da venda
   getVenda() {
-    return `Venda realizada - Produto: ${this.nome}, Quantidade Vendida: ${
-      this.quantidadeVendida
-    }, Desconto: R$${this.desconto.toFixed(2)}, Estoque Atual: ${
-      this.quantidade
-    }`;
+    return `Produto: ${this.nome}, Quantidade Vendida: ${this.quantidadeVendida}, Desconto: ${this.desconto}, Estoque Atual: ${this.quantidade}`;
   }
 }
 
-// Exemplo de uso:
-const produto = new Produto();
-produto.setProduto({ nome: "Arroz", preco: 5.0, quantidade: 50 });
-produto.setProduto({ nome: "FeiJão", preco: 5.0, quantidade: 50 });
-console.log(produto.getProduto());
+// Cria uma nova instância da classe Venda
+let venda = new Venda();
 
-const venda = new Venda();
-if (venda.setVenda({ nome: "Arroz", quantidade: 10, desconto: 1.0 })) {
-  console.log(venda.getVenda());
-  console.log(produto.getProduto());
-}
+// Cadastra um novo produto
+venda.setProduto(["Maçã", 0.5, 100]);
+
+// Exibe o produto cadastrado
+console.log(venda.getProduto()); // Produto: Maçã, Preço: 0.5, Quantidade: 100
+
+// Registra uma venda
+venda.setVenda(5, 0);
+
+// Exibe a última venda registrada e o estoque atual do produto
+console.log(venda.getVenda()); // Produto: Maçã, Quantidade Vendida: 5, Desconto: 0, Estoque Atual: 95
