@@ -1,7 +1,6 @@
 # Desafio técnico: Desenvolvedor de Software 🚀
 
 ## Problema Proposto:
-
 Você está encarregado de desenvolver um sistema de Ponto de Venda (PDV) para o
 cliente: Mercadinho JWT. A aplicação deve incluir uma classe responsável pelo cadastro
 de produtos, com os atributos de nome, preço e quantidade. A classe `Produto` deve
@@ -15,9 +14,9 @@ atributos da classe produto, possuindo em seus próprios atributos a quantidade 
 desconto.
 Dentro da classe `Venda`, devem ser implementados os seguintes métodos:
 
-**getVenda**
+**- getVenda**
 <br/>
-**setVenda**.
+**- setVenda**
 
 O método `setVenda` é responsável pelo registro da venda. Inicialmente, ele deve
 verificar se o produto está cadastrado. Em caso afirmativo, deve validar o estoque do
