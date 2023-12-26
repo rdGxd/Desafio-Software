@@ -1,6 +1,7 @@
 # Desafio técnico: Desenvolvedor de Software 🚀
 
 ## Problema Proposto:
+
 Você está encarregado de desenvolver um sistema de Ponto de Venda (PDV) para o
 cliente: Mercadinho JWT. A aplicação deve incluir uma classe responsável pelo cadastro
 de produtos, com os atributos de nome, preço e quantidade. A classe `Produto` deve
@@ -23,3 +24,24 @@ verificar se o produto está cadastrado. Em caso afirmativo, deve validar o esto
 produto e, em seguida, permitir a venda do produto. Após a conclusão da venda, é
 necessário utilizar o método `getVenda` para exibir a última venda registrada e informar o
 estoque atual do produto.
+
+## Observações:
+
+- É estritamente proibido utilizar trechos de códigos plagiados da internet;
+- É necessário explicar através de comentários a lógica aplicada;
+- Você terá total liberdade para a criação do código, desde que não fuja das
+  funcionalidades básicas do sistema (Lançar venda e Cadastrar Produto);
+- É obrigatório o uso de conceitos de POO, caso o contrário o candidato será
+  eliminado;
+
+## Barema de Avaliação:
+
+| Objetivos                              | Pontuação  |
+| -------------------------------------- | ---------- |
+| **_Originalidade:_**                   | **15%**    |
+| **_Lógica Aplicada:_**                 | **15%**    |
+| **_Tratamento de Erros:_**             | **10%**    |
+| **_Código funcional:_**                | **10%**    |
+| **_Atingiu os objetivos do Sistema:_** | **25%**    |
+| **_Descrição da lógica aplicada:_**    | **25%**    |
+| **_Total_**                            | **_100%_** |
