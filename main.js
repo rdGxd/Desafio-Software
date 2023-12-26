@@ -55,7 +55,6 @@ let venda = new Venda();
 
 // Cadastra um novo produto
 venda.setProduto(["Maçã", 0.5, 100]); // Produto: Maçã, Preço: 0.5, Quantidade: 100
-venda.setProduto(["Feijão", 10, 100]); // Produto: Maçã, Preço: 0.5, Quantidade: 100
 
 // Exibe o produto cadastrado
 console.log(venda.getProduto()); // Saída: Produto: Maçã, Preço: 0.5, Quantidade: 100
