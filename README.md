@@ -36,12 +36,12 @@ estoque atual do produto.
 
 ## Barema de Avaliação:
 
-| Objetivos                              | Pontuação  |
-| -------------------------------------- | ---------- |
-| **_Originalidade:_**                   | **15%**    |
-| **_Lógica Aplicada:_**                 | **15%**    |
-| **_Tratamento de Erros:_**             | **10%**    |
-| **_Código funcional:_**                | **10%**    |
-| **_Atingiu os objetivos do Sistema:_** | **25%**    |
-| **_Descrição da lógica aplicada:_**    | **25%**    |
-| **_Total_**                            | **_100%_** |
+| Objetivos                                               | Pontuação                   |
+| ------------------------------------------------------- | --------------------------- |
+| <center>**_Originalidade:_**</center>                   | <center>**15%**</center>    |
+| <center>**_Lógica Aplicada:_**</center>                 | <center>**15%**</center>    |
+| <center>**_Tratamento de Erros:_**</center>             | <center>**10%**</center>    |
+| <center>**_Código funcional:_**</center>                | <center>**10%**</center>    |
+| <center>**_Atingiu os objetivos do Sistema:_**</center> | <center>**25%**</center>    |
+| <center>**_Descrição da lógica aplicada:_**</center>    | <center>**25%**</center>    |
+| <center>**_Total_**</center>                            | <center>**_100%_**</center> |
