@@ -17,7 +17,6 @@ Dentro da classe `Venda`, devem ser implementados os seguintes métodos:
 
 **getVenda**
 <br/>
-<br/>
 **setVenda**.
 
 O método `setVenda` é responsável pelo registro da venda. Inicialmente, ele deve
